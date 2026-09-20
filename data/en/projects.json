@@ -1,0 +1,194 @@
+[
+  {
+    "id": "project-1",
+    "name": "MOJI (Meet Up, Now!)",
+    "subtitle": "A web service for matching and managing small-group meetups",
+    "intention": "A platform that breaks down communication barriers between departments and class years on campus, so anyone can easily <strong>create and run a meetup</strong> around <strong>a shared interest or goal (projects, study groups)</strong>.",
+    "behindStory": "As vice president of a club, I tried to set up collaborations and joint study groups with other clubs, but felt the inconvenience of having no channel on campus to connect us. To unify the fragmented culture of student meetups and broaden students' collaboration experience, I led the planning and development myself.",
+    "period": "Jul 2023 – Feb 2024 (7 months)",
+    "team": "Team of 5",
+    "position": "Backend Lead Developer",
+    "images": [
+      {
+        "label": "Demo screens",
+        "src": "data/images/project1-demo.png"
+      },
+      {
+        "label": "Architecture",
+        "src": "data/images/project1-arch.png"
+      }
+    ],
+    "features": [
+      {
+        "title": "Meetup lifecycle management",
+        "summary": "Designed the full CRUD API, from real-time meetup creation to participant limits and permission control",
+        "detail": "Implemented category- and tag-based search filtering and detailed the accept/decline states organizers manage, building a stable participation flow."
+      },
+      {
+        "title": "API gateway for unified MSA logging",
+        "summary": "Built a single entry point with Spring Cloud Gateway and consolidated JWT authentication to remove duplication",
+        "detail": "Standardized request/response logs from distributed microservices so they are collected in one place, and centralized the auth filter at the gateway to share authorization logic across services."
+      },
+      {
+        "title": "Refactoring the monolith into microservices (MSA)",
+        "summary": "Split into Auth, MAIN and Chat services and set up independent deployment",
+        "detail": "Chose a separate database for each service (MySQL/MongoDB) to improve availability, and built REST-based communication between services to strengthen stability."
+      }
+    ],
+    "troubleShooting": [
+      {
+        "problem": "The entire service went down under server load while developing the chat feature",
+        "cause": "The chat service was merged onto a single AWS free-tier instance, exceeding its resource limits",
+        "solution": "Expanded infrastructure with server resources provided by the university and fully separated the chat service, introducing a microservice (MSA) structure",
+        "result": "Failure isolation keeps other features working even if chat fails, and standardized errors make real-time monitoring easier"
+      }
+    ],
+    "techStack": [
+      "Java 17",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "Spring Security",
+      "JPA",
+      "JWT",
+      "MySQL",
+      "MongoDB",
+      "WebSocket",
+      "Docker",
+      "AWS EC2",
+      "Gradle"
+    ],
+    "github": "https://github.com/Dev-JihyeMoon/MOJI.git",
+    "demo": "https://www.youtube.com/",
+    "planning": [
+      {
+        "title": "Writing posts",
+        "description": "Write a recruitment post and set the headcount, period and description"
+      },
+      {
+        "title": "Meetup matching",
+        "description": "Apply to join; the organizer accepts or declines to confirm members"
+      },
+      {
+        "title": "Chat",
+        "description": "A real-time chat room for confirmed meetup members"
+      },
+      {
+        "title": "Categories",
+        "description": "Find meetups by type (projects, study groups) and tags"
+      }
+    ],
+    "retrospective": [
+      {
+        "label": "What went well",
+        "text": "After a single-server outage, I separated the chat service and split the system into Auth, MAIN and Chat, building a failure-isolated, independently deployable structure myself."
+      },
+      {
+        "label": "What I'd improve",
+        "text": "I adopted MSA earlier than the scale of the service warranted, which increased operational complexity. Measuring traffic and bottlenecks before the transition would have made it a better-grounded decision."
+      },
+      {
+        "label": "What I learned",
+        "text": "Architecture should start from real failures and requirements, not technical preference — and, as a lead, documenting things so the whole team shares the same understanding."
+      }
+    ]
+  },
+  {
+    "id": "project-2",
+    "name": "Beeper",
+    "subtitle": "A real-time video-call volunteer matching service for people who struggle with digital technology",
+    "intention": "A real-time assistance platform that removes everyday barriers such as kiosks and online reservations for <strong>older adults and others less comfortable with digital tools</strong> with <strong>just their voice</strong>, and <strong>matches them by video call</strong> with volunteers on standby.",
+    "behindStory": "I noticed a contradiction: for seniors, even the \"sign up and write a post\" steps of existing apps are a huge barrier. I concluded that seeing and speaking is more intuitive and faster than chat, and planned a zero-barrier service: \"speak and it becomes a request; accept it and you are face to face right away.\"",
+    "period": "Aug 2024 (1 month)",
+    "team": "Team of 4 (2 backend, 2 frontend)",
+    "position": "Backend Development Lead",
+    "images": [
+      {
+        "label": "Demo screens",
+        "src": "data/images/project2-demo.gif"
+      },
+      {
+        "label": "ERD",
+        "src": "data/images/project2-db.png"
+      }
+    ],
+    "features": [
+      {
+        "title": "One-touch help requests by voice recognition",
+        "summary": "STT (Speech-to-Text) integration and FCM push notifications for users who are not logged in",
+        "detail": "Requests are created automatically from microphone input and lets users correct misrecognized text, and notifications are sent and received via FCM tokens with no sign-up to remove barriers."
+      },
+      {
+        "title": "Concurrency control and a signaling server",
+        "summary": "Guaranteed first-come matching with conditional DB updates and connected WebRTC P2P calls through a WebSocket relay",
+        "detail": "Ensured that only one volunteer succeeds when many accept at once, and routed WebRTC session information (SDP/ICE) accurately to the matched peer with a WebSocket handler."
+      },
+      {
+        "title": "DB design for matching standby and history management",
+        "summary": "ERD optimized for filtering waiting states and automatically storing history when a call ends",
+        "detail": "Mapped volunteer availability (available) to preferred-notification tags and designed a normalized model so that data accumulates into activity statistics without loss when a call ends."
+      }
+    ],
+    "troubleShooting": [
+      {
+        "problem": "Multiple volunteers accepted the same request at once, causing duplicate matches",
+        "cause": "Reading the state (Select) and updating it (Update) were separate steps in the accept API, creating a race condition",
+        "solution": "Used a single-query update with a WHERE status = 'WAITING' condition for atomic first-come handling",
+        "result": "Fully eliminated duplicate matches at the DB level without the cost of a distributed lock"
+      },
+      {
+        "problem": "Signals were lost because the WebRTC offer/answer exchange timing did not line up",
+        "cause": "The senior and the volunteer joined the socket room at different times, so early signaling messages were lost",
+        "solution": "Had the signaling server track room-join order and send the offer only after both sides were confirmed to have joined",
+        "result": "Brought the video-call connection failure rate on first accept close to zero and secured call stability"
+      }
+    ],
+    "techStack": [
+      "Java 21",
+      "Spring Boot 3.3",
+      "Spring Security",
+      "JPA",
+      "JWT",
+      "MySQL",
+      "WebRTC",
+      "WebSocket",
+      "Firebase(FCM)",
+      "AWS EC2",
+      "Gradle",
+      "Swagger"
+    ],
+    "github": "https://github.com/Dev-JihyeMoon/Beeper",
+    "demo": "https://www.youtube.com/",
+    "planning": [
+      {
+        "title": "Voice help request",
+        "description": "Create a request just by speaking, <strong>with no sign-up or typing</strong>"
+      },
+      {
+        "title": "Volunteer matching",
+        "description": "Notify waiting volunteers and connect with <strong>the first one to accept</strong>"
+      },
+      {
+        "title": "Real-time video call",
+        "description": "Help while <strong>seeing each other</strong> and sharing the screen, instead of chatting"
+      },
+      {
+        "title": "Activity history",
+        "description": "Volunteer activity is <strong>recorded and accumulated automatically</strong> after each call"
+      }
+    ],
+    "retrospective": [
+      {
+        "label": "What went well",
+        "text": "Within just one month, I traced the root causes of the two core problems — concurrency (first-come matching) and signaling timing — and solved them."
+      },
+      {
+        "label": "What I'd improve",
+        "text": "With so little time, I could not do enough automated testing or load testing. I wish I had left a concurrent-request test for the accept API in the codebase."
+      },
+      {
+        "label": "What I learned",
+        "text": "Planning to lower users' barriers ended up shaping technical choices too (FCM without login, voice input), and atomicity can be secured with query conditions instead of a distributed lock."
+      }
+    ]
+  }
+]

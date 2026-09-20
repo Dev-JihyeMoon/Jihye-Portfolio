@@ -1,0 +1,49 @@
+{
+  "certifications": [
+    {
+      "name": "OPIc Japanese — AL (Advanced Low)",
+      "issuer": "ACTFL",
+      "date": "2026.04.28"
+    }
+  ],
+  "awards": [
+    {
+      "name": "Naeilharu, a real-time meetup matching web platform — Excellence Award",
+      "issuer": "Kangnam University Academic Festival",
+      "date": "2023.05",
+      "description": ""
+    },
+    {
+      "name": "Challengers, the LIKELION university club's own web service — Encouragement Award",
+      "issuer": "Kangnam University Academic Festival",
+      "date": "2023.05",
+      "description": ""
+    },
+    {
+      "name": "Facility management web service using public data — Encouragement Award / Progress Award",
+      "issuer": "Kangnam University Academic Festival · Seoul IoT Urban Data Hackathon",
+      "date": "2022.08 — 2022.12",
+      "description": "Won the Encouragement Award at the festival and the Progress Award at the hackathon"
+    },
+    {
+      "name": "Drowsy-driving prevention system with Raspberry Pi & OpenCV — Excellence Award / Encouragement Award",
+      "issuer": "Kangnam University Academic Festival · Hanium IoT Competition",
+      "date": "2022.12",
+      "description": "Won the Excellence Award at the festival and the Encouragement Award at the Hanium competition"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Website banner design for Qlabs (contract work)",
+      "issuer": "Qlabs (큐랩스) · organized by Kangnam University School of ICT Convergence Engineering",
+      "date": "2022.11",
+      "description": "Designed the company website's banners to responsive size specifications"
+    },
+    {
+      "name": "Assistant instructor, Intel AI Global Impact Festival",
+      "issuer": "Organized by Intel & Deokyoung High School",
+      "date": "2021.10",
+      "description": "Taught basic Python syntax and assisted with OpenCV hands-on sessions"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "certifications": [
+    {
+      "name": "OPIc 日本語 AL(Advanced Low)",
+      "issuer": "ACTFL",
+      "date": "2026.04.28"
+    }
+  ],
+  "awards": [
+    {
+      "name": "「Naeilharu(내일하루)」リアルタイム集まりマッチングWebプラットフォーム — 優秀賞",
+      "issuer": "Kangnam University 学術祭",
+      "date": "2023.05",
+      "description": ""
+    },
+    {
+      "name": "「チャレンジャーズ」LIKELION大学サークルの自主Webサービス制作 — 奨励賞",
+      "issuer": "Kangnam University 学術祭",
+      "date": "2023.05",
+      "description": ""
+    },
+    {
+      "name": "公共データを活用した施設管理Webサービス — 奨励賞 / 発展賞",
+      "issuer": "Kangnam University 学術祭・ソウル市IoT都市データハッカソン",
+      "date": "2022.08 — 2022.12",
+      "description": "学術祭で奨励賞、ハッカソンで発展賞を同時受賞"
+    },
+    {
+      "name": "Raspberry Pi & OpenCVによる居眠り運転防止システム — 優秀賞 / 奨励賞",
+      "issuer": "Kangnam University 学術祭・Hanium IoTコンテスト",
+      "date": "2022.12",
+      "description": "学術祭で優秀賞、Hanium コンテストで奨励賞を同時受賞"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Qlabs(큐랩스)Webサイトのバナーデザイン(業務委託)",
+      "issuer": "Qlabs(큐랩스)・Kangnam University ICT融合工学部主催",
+      "date": "2022.11",
+      "description": "会社Webサイトのバナーをレスポンシブサイズの規格に合わせて制作"
+    },
+    {
+      "name": "Intel AI Global Impact Festival アシスタント講師(教育補助)",
+      "issuer": "Intel・Deokyoung High School 主催",
+      "date": "2021.10",
+      "description": "Python基礎文法の講義と、OpenCV実習の補助を担当"
+    }
+  ]
+}

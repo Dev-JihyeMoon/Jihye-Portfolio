@@ -1,0 +1,18 @@
+{
+  "description": "If anything stays the same in the age of AI, I believe it is purpose. <br /> I'm Jihye Moon, a developer growing into someone who can identify what really matters in a given situation and find the optimal answer.",
+  "values": [
+    {
+      "title": "I start with the essence",
+      "description": "Before building a feature, I define what problem the service is trying to solve. When the purpose is clear, it becomes easy to cut what isn't needed."
+    },
+    {
+      "title": "I dig until I find the optimum",
+      "description": "I don't stop at \"it works.\" I check why it works and whether a better structure exists. Solving the concurrency problem in first-come-first-served matching at the database level is one example."
+    },
+    {
+      "title": "I care about how a team works together",
+      "description": "As backend lead on team projects, I learned that settling API specs and working agreements up front largely determines the quality of the result."
+    }
+  ],
+  "logos": []
+}

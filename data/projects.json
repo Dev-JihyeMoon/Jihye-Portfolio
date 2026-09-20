@@ -3,14 +3,20 @@
     "id": "project-1",
     "name": "MOJI (모여라, 지금!)",
     "subtitle": "소모임 매칭 및 운영 관리 웹 서비스",
-    "intention": "교내 학과·학번 간의 소통 장벽을 허물고, 누구나 공통의 관심사나 목표(프로젝트/스터디)를 기반으로 쉽게 모임을 개설·운영할 수 있도록 돕는 플랫폼입니다.",
+    "intention": "교내 학과·학번 간의 소통 장벽을 허물고, 누구나 <strong>공통의 관심사나 목표(프로젝트/스터디)</strong>를 기반으로 쉽게 <strong>모임을 개설·운영</strong>할 수 있도록 돕는 플랫폼입니다.",
     "behindStory": "동아리 부회장으로 활동하며 타 동아리와의 협업이나 연합 스터디를 추진하려 했으나, 교내에 이를 중개할 소통 창구가 없다는 불편함을 체감했습니다. 파편화된 모임 문화를 통합하고, 학생들의 협업 경험을 확장하기 위해 직접 기획 및 개발을 주도했습니다.",
     "period": "2023.07 – 2024.02 (7개월)",
     "team": "5인 팀 프로젝트",
     "position": "백엔드 리드 개발자",
     "images": [
-      { "label": "시연 화면", "src": "data/images/project1-demo.png" },
-      { "label": "아키텍처", "src": "data/images/project1-arch.png" }
+      {
+        "label": "시연 화면",
+        "src": "data/images/project1-demo.png"
+      },
+      {
+        "label": "아키텍처",
+        "src": "data/images/project1-arch.png"
+      }
     ],
     "features": [
       {
@@ -37,23 +43,73 @@
         "result": "장애 격리로 채팅 장애 시에도 타 기능 정상 작동, 에러 규격화로 실시간 모니터링 편의성 증대"
       }
     ],
-    "techStack": ["Java 17", "Spring Boot", "Spring Cloud Gateway", "Spring Security", "JPA", "JWT", "MySQL", "MongoDB", "WebSocket", "Docker", "AWS EC2", "Gradle"],
+    "techStack": [
+      "Java 17",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "Spring Security",
+      "JPA",
+      "JWT",
+      "MySQL",
+      "MongoDB",
+      "WebSocket",
+      "Docker",
+      "AWS EC2",
+      "Gradle"
+    ],
     "github": "https://github.com/Dev-JihyeMoon/MOJI.git",
-    "demo": "https://www.youtube.com/"
+    "demo": "https://www.youtube.com/",
+    "planning": [
+      {
+        "title": "글쓰기",
+        "description": "모임 모집글을 작성하고 모집 인원·기간·소개를 설정"
+      },
+      {
+        "title": "모임 매칭",
+        "description": "참여 신청 후 모임장이 수락/거절하여 인원을 확정"
+      },
+      {
+        "title": "채팅",
+        "description": "확정된 모임 멤버끼리 실시간으로 소통하는 채팅방"
+      },
+      {
+        "title": "카테고리",
+        "description": "프로젝트·스터디 등 유형과 태그로 원하는 모임을 검색"
+      }
+    ],
+    "retrospective": [
+      {
+        "label": "잘한 점",
+        "text": "단일 서버 장애를 겪은 뒤 채팅 서비스를 분리하고, Auth·MAIN·Chat으로 나누어 장애 격리와 독립 배포 구조를 직접 만들어 본 점."
+      },
+      {
+        "label": "아쉬운 점",
+        "text": "MSA 전환을 서비스 규모에 비해 이르게 도입해 운영 복잡도가 커졌습니다. 전환 전에 트래픽과 병목을 수치로 확인했다면 더 근거 있는 결정이 되었을 것입니다."
+      },
+      {
+        "label": "배운 점",
+        "text": "아키텍처는 기술 선호가 아니라 실제 장애와 요구사항에서 출발해야 한다는 것, 그리고 리드로서 팀원이 같은 그림을 보도록 문서화하는 일의 중요성을 배웠습니다."
+      }
+    ]
   },
-
   {
     "id": "project-2",
     "name": "Beeper (삐삐)",
     "subtitle": "디지털 취약계층용 실시간 영상통화 봉사 매칭 서비스",
-    "intention": "디지털 취약계층이나 노약자가 키오스크나 온라인 예약 등 일상에서 마주하는 장벽을 '음성' 하나로 해결하고, 실시간 대기 중인 봉사자와 '영상통화'로 매칭해 주는 실시간 도우미 플랫폼입니다.",
+    "intention": "<strong>디지털 취약계층이나 노약자</strong>가 키오스크나 온라인 예약 등 일상에서 마주하는 장벽을 <strong>'음성' 하나</strong>로 해결하고, 실시간 대기 중인 봉사자와 <strong>'영상통화'로 매칭</strong>해 주는 실시간 도우미 플랫폼입니다.",
     "behindStory": "시니어 계층에게는 기존 앱의 '회원가입, 글쓰기' 절차 자체가 거대한 장벽이라는 모순에 주목했습니다. 채팅보다 눈으로 보며 말하는 것이 가장 직관적이고 빠르다는 결론을 내렸고, '말하면 요청이 되고, 수락하면 즉시 얼굴을 보며 연결되는' 제로-배리어(Zero-Barrier) 서비스를 기획했습니다.",
     "period": "2024.08 (1개월)",
     "team": "4인 팀 프로젝트 (백엔드 2명, 프론트엔드 2명)",
     "position": "백엔드 개발 리더",
     "images": [
-      { "label": "시연 화면", "src": "data/images/project2-demo.gif" },
-      { "label": "ERD", "src": "data/images/project2-db.png" }
+      {
+        "label": "시연 화면",
+        "src": "data/images/project2-demo.gif"
+      },
+      {
+        "label": "ERD",
+        "src": "data/images/project2-db.png"
+      }
     ],
     "features": [
       {
@@ -86,8 +142,53 @@
         "result": "초기 수락 시 영상통화 연결 실패율을 제로에 가깝게 줄이며 통화 안정성 확보"
       }
     ],
-    "techStack": ["Java 21", "Spring Boot 3.3", "Spring Security", "JPA", "JWT", "MySQL", "WebRTC", "WebSocket", "Firebase(FCM)", "AWS EC2", "Gradle", "Swagger"],
+    "techStack": [
+      "Java 21",
+      "Spring Boot 3.3",
+      "Spring Security",
+      "JPA",
+      "JWT",
+      "MySQL",
+      "WebRTC",
+      "WebSocket",
+      "Firebase(FCM)",
+      "AWS EC2",
+      "Gradle",
+      "Swagger"
+    ],
     "github": "https://github.com/Dev-JihyeMoon/Beeper",
-    "demo": "https://www.youtube.com/"
+    "demo": "https://www.youtube.com/",
+    "planning": [
+      {
+        "title": "음성 도움 요청",
+        "description": "<strong>가입·글쓰기 없이</strong> 말 한마디로 요청 생성"
+      },
+      {
+        "title": "봉사자 매칭",
+        "description": "대기 중인 봉사자에게 알림, <strong>먼저 수락한 1명</strong>과 연결"
+      },
+      {
+        "title": "실시간 영상통화",
+        "description": "채팅 대신 <strong>얼굴을 보며</strong> 화면을 함께 확인하고 도움"
+      },
+      {
+        "title": "활동 이력",
+        "description": "통화 종료 후 봉사 활동이 <strong>자동으로 기록·누적</strong>"
+      }
+    ],
+    "retrospective": [
+      {
+        "label": "잘한 점",
+        "text": "1개월이라는 짧은 기간에도 동시성(선착순 매칭)과 시그널링 타이밍이라는 핵심 문제를 원인부터 분석해 해결한 점."
+      },
+      {
+        "label": "아쉬운 점",
+        "text": "기간이 짧아 자동화 테스트와 부하 검증을 충분히 하지 못했습니다. 수락 API 동시 요청 테스트를 코드로 남기지 못한 점이 아쉽습니다."
+      },
+      {
+        "label": "배운 점",
+        "text": "사용자의 장벽을 줄이는 기획이 기술 선택(비로그인 FCM, 음성 입력)까지 결정한다는 것과, 분산 락 없이도 쿼리 조건으로 원자성을 확보할 수 있다는 것을 배웠습니다."
+      }
+    ]
   }
 ]

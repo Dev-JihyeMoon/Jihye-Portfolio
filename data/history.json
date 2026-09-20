@@ -3,7 +3,8 @@
     "period": "2026.06 - 2026.12",
     "title": "멋쟁이 사자처럼 | 백엔드 부트캠프 26기 : Java & Spring",
     "type": "education",
-    "description": "Spring Boot 기반 백엔드 개발과 AWS 인프라 운영 실무 중심 교육 · 진행 중"
+    "description": "Spring Boot 기반 백엔드 개발과 AWS 인프라 운영 실무 중심 교육",
+    "current": true
   },
   {
     "period": "2020.03 - 2024.08",

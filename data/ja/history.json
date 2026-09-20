@@ -1,0 +1,33 @@
+[
+  {
+    "period": "2026.06 - 2026.12",
+    "title": "LIKELION | Backend Bootcamp Cohort 26: Java & Spring",
+    "type": "education",
+    "description": "Spring Bootによるバックエンド開発とAWSインフラ運用の実務中心の教育",
+    "current": true
+  },
+  {
+    "period": "2020.03 - 2024.08",
+    "title": "Kangnam University, School of Software Application",
+    "type": "education",
+    "description": "主専攻:コンピュータ工学科、副専攻:データサイエンス学科 卒業"
+  },
+  {
+    "period": "2023.03 - 2023.06",
+    "title": "LIKELION 大学サークル",
+    "type": "experience",
+    "description": "バックエンドトラック・Web開発の基礎からチームプロジェクトまで実施、学術祭で受賞"
+  },
+  {
+    "period": "2022.03 - 2022.12",
+    "title": "Hanium ICTメンタリングプロジェクト",
+    "type": "experience",
+    "description": "産学連携プロジェクトに参加・要件分析から設計、実装、発表まで全工程を担当・学術祭とコンテストで受賞"
+  },
+  {
+    "period": "2017.03 - 2020.02",
+    "title": "Deokyoung High School, Department of Software",
+    "type": "education",
+    "description": "卒業"
+  }
+]
