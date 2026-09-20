@@ -20,6 +20,7 @@
   --cause-bg: #FBEBB8;  --cause-ink: #6B4700;
   --solve-bg: #DCE6FF;  --solve-ink: #1B3FB8;
   --result-bg: #D3F1E2; --result-ink: #0B5B36;
+  --hl: #FFF6C6;
   --shadow: 0 1px 2px rgba(20, 22, 32, 0.05), 0 18px 40px -22px rgba(20, 22, 32, 0.22);
   --r: 24px;
   --r-sm: 14px;
@@ -47,6 +48,7 @@
   --cause-bg: #352C14;  --cause-ink: #F0D27E;
   --solve-bg: #1D2A52;  --solve-ink: #ADC0FF;
   --result-bg: #143224; --result-ink: #86E2B3;
+  --hl: rgba(255, 214, 64, 0.2);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 18px 40px -22px rgba(0, 0, 0, 0.8);
   color-scheme: dark;
 }
@@ -208,11 +210,6 @@ strong {
 .values h3 { font-size: 21px; letter-spacing: -0.025em; margin-bottom: 8px; }
 .values p { color: var(--ink-2); font-size: 16.5px; line-height: 1.75; }
 
-.logo-block { margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--line); }
-.logo-grid { display: flex; flex-wrap: wrap; gap: 16px; }
-.logo-item { width: 200px; margin: 0; border: 1px solid var(--line); border-radius: var(--r-sm); background: #fff; overflow: hidden; cursor: zoom-in; }
-.logo-item img { width: 100%; height: 140px; object-fit: contain; padding: 16px; }
-.logo-item figcaption { padding: 8px 12px; font-size: 13px; font-weight: 600; text-align: center; color: var(--ink-2); background: var(--card); border-top: 1px solid var(--line); }
 
 
 /* ================= skills ================= */
@@ -294,23 +291,23 @@ strong {
   display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
   font-size: 13px; font-weight: 700; background: var(--accent-soft); color: var(--accent-text);
 }
-.feats h5 { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent-text); }
-.feat-sum { margin-top: 3px; font-size: 17px; font-weight: 600; }
-.feat-det { margin-top: 6px; font-size: 16px; line-height: 1.75; color: var(--ink-2); }
+.feats h5 { font-size: clamp(18px, 1.5vw, 20px); font-weight: 700; letter-spacing: -0.02em; color: var(--accent-text); }
+.feat-sum { margin-top: 4px; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.7; font-weight: 600; }
+.feat-det { margin-top: 6px; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.8; color: var(--ink-2); }
 
 /* trouble shooting */
 .ts { border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; }
 .ts-list { display: grid; grid-template-columns: 1fr; gap: 14px; }
-.ts-problem { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: var(--warn-bg); color: var(--warn-ink); border-bottom: 1px solid var(--warn-line); font-size: 16.5px; font-weight: 700; }
+.ts-problem { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: var(--warn-bg); color: var(--warn-ink); border-bottom: 1px solid var(--warn-line); font-size: clamp(17px, 1.4vw, 19px); font-weight: 700; }
 .ts-problem svg { width: 18px; height: 18px; }
-.ts dl { padding: 16px 20px; display: grid; gap: 10px; }
+.ts dl { padding: 16px 20px; display: grid; gap: 8px; }
 .ts dl > div { display: flex; gap: 12px; }
-.ts dt { flex-shrink: 0; min-width: 46px; padding: 0 10px; height: 24px; margin-top: 3px; border-radius: 999px; font-size: 12px; font-weight: 700; display: grid; place-items: center; }
+.ts dt { flex-shrink: 0; min-width: 46px; padding: 0 10px; height: 26px; margin-top: 5px; border-radius: 999px; font-size: 13px; font-weight: 700; display: grid; place-items: center; }
 .b-cause { background: var(--cause-bg); color: var(--cause-ink); }
 .b-solve { background: var(--solve-bg); color: var(--solve-ink); }
 .b-result { background: var(--result-bg); color: var(--result-ink); }
-.ts dd { font-size: 16px; line-height: 1.7; color: var(--ink); }
-.ts dd.strong { color: var(--ink); font-weight: 600; }
+.ts dd { font-size: clamp(17px, 1.4vw, 19px); line-height: 1.8; color: var(--ink); }
+.ts dd.strong { color: var(--result-ink); font-weight: 600; }
 
 /* retrospective */
 .retro { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
@@ -426,3 +423,16 @@ html:lang(en) .hero-h { font-size: clamp(32px, 4.1vw, 56px); line-height: 1.14; 
 
 /* 기술 스택 구분선과 겹치지 않도록 */
 .blk:has(+ .p-tech) { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+
+
+/* 형광펜: 기획 · 주요 기능 / 구현 내용의 핵심 구절 */
+.plan strong, .feats strong {
+  color: inherit; font-weight: inherit; padding: 0 3px; margin: 0 -1px; border-radius: 3px;
+  background: linear-gradient(transparent 18%, var(--hl) 18%, var(--hl) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+
+
+/* 키보드 포커스: 이미지 확대 */
+.shot img:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; border-radius: 0; }
+.lightbox-close:focus-visible { outline: 2px solid #fff; outline-offset: 4px; border-radius: 6px; }

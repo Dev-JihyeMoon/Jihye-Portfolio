@@ -20,19 +20,14 @@
     ],
     "features": [
       {
-        "title": "集まりのライフサイクル管理システム",
-        "summary": "リアルタイムの集まり作成から人数制限、権限制御まで、CRUD APIを一式設計",
-        "detail": "カテゴリ・タグベースの検索フィルタを実装し、主催者の承認/拒否の状態管理を細分化して、安定した参加フローを構築しました。"
-      },
-      {
         "title": "MSA統合ロギングのためのAPIゲートウェイ",
-        "summary": "Spring Cloud Gatewayによる単一の入口を構築し、JWT認証の処理を集約して重複を排除",
-        "detail": "分散したマイクロサービスのリクエスト・レスポンスログを統一フォーマットにして一か所で収集し、認証フィルタをゲートウェイに集中させて、各サービスの認可ロジックを共通化しました。"
+        "summary": "Spring Cloud Gatewayによる<strong>単一の入口を構築</strong>し、JWT認証の処理を集約して<strong>重複を排除</strong>",
+        "detail": "分散したマイクロサービスのリクエスト・レスポンスログを統一フォーマットにして<strong>一か所で収集</strong>し、認証フィルタをゲートウェイに集中させて、各サービスの<strong>認可ロジックを共通化</strong>しました。"
       },
       {
         "title": "モノリスアーキテクチャのMSAリファクタリング",
-        "summary": "Auth・MAIN・Chatの3サービスに分割し、独立デプロイ環境を構築",
-        "detail": "サービスの特性に合わせてDBを分離(MySQL/MongoDB)して可用性を確保し、サービス間のREST通信を構築してシステムの安定性を強化しました。"
+        "summary": "Auth・MAIN・Chatの3サービスに分割し、<strong>独立デプロイ環境を構築</strong>",
+        "detail": "サービスの特性に合わせて<strong>DBを分離(MySQL/MongoDB)して可用性を確保</strong>し、<strong>サービス間のREST通信</strong>を構築してシステムの安定性を強化しました。"
       }
     ],
     "troubleShooting": [
@@ -62,19 +57,19 @@
     "planning": [
       {
         "title": "投稿",
-        "description": "募集投稿を書き、人数・期間・紹介を設定"
+        "description": "<strong>募集投稿を書き</strong>、人数・期間・紹介を設定"
       },
       {
         "title": "集まりのマッチング",
-        "description": "参加を申し込み、主催者が承認/拒否して人数を確定"
+        "description": "参加を申し込み、<strong>主催者が承認/拒否</strong>して人数を確定"
       },
       {
         "title": "チャット",
-        "description": "確定したメンバー同士がリアルタイムでやり取りするチャットルーム"
+        "description": "確定したメンバー同士が<strong>リアルタイム</strong>でやり取りするチャットルーム"
       },
       {
         "title": "カテゴリ",
-        "description": "プロジェクト・勉強会などの種類とタグで集まりを検索"
+        "description": "プロジェクト・勉強会などの<strong>種類とタグ</strong>で集まりを検索"
       }
     ],
     "retrospective": [
@@ -114,18 +109,18 @@
     "features": [
       {
         "title": "音声認識によるワンタッチのサポート依頼",
-        "summary": "STT(Speech-to-Text)連携と、ログイン不要(非会員)のシニア向けFCMプッシュ通知の処理",
-        "detail": "マイク入力から依頼を自動生成して誤認識時の修正にも対応し、壁をなくすため、登録なしでFCMトークンベースで通知を送受信できるように実装しました。"
+        "summary": "<strong>STT(Speech-to-Text)連携</strong>と、ログイン不要(非会員)のシニア向け<strong>FCMプッシュ通知</strong>の処理",
+        "detail": "マイク入力から依頼を自動生成して誤認識時の修正にも対応し、壁をなくすため、<strong>登録なしでFCMトークンベースで通知を送受信</strong>できるように実装しました。"
       },
       {
         "title": "同時実行制御とシグナリングサーバーの実装",
-        "summary": "DBの条件付き更新で先着順マッチングを保証し、WebSocketの中継でWebRTC P2P通話を接続",
-        "detail": "多数のボランティアが同時に承諾しても1名だけが成功するよう同時実行を処理し、WebSocketハンドラでWebRTCのセッション情報(SDP/ICE)をマッチング相手へ正確にルーティングしました。"
+        "summary": "DBの条件付き更新で<strong>先着順マッチングを保証</strong>し、WebSocketの中継で<strong>WebRTC P2P通話を接続</strong>",
+        "detail": "多数のボランティアが同時に承諾しても<strong>1名だけが成功するよう同時実行を処理</strong>し、WebSocketハンドラでWebRTCのセッション情報(SDP/ICE)をマッチング相手へ正確にルーティングしました。"
       },
       {
         "title": "マッチング待機と履歴管理のためのDB構造設計",
-        "summary": "待機状態のフィルタリングと、通話終了時の履歴自動蓄積のためのERD最適化",
-        "detail": "ボランティアの稼働状態(available)と希望通知タグをマッピングし、通話終了時にデータを失うことなく活動統計(ACTIVITY)として自動蓄積される、正規化されたモデルを設計しました。"
+        "summary": "待機状態のフィルタリングと、通話終了時の<strong>履歴自動蓄積</strong>のための<strong>ERD最適化</strong>",
+        "detail": "ボランティアの稼働状態(available)と希望通知タグをマッピングし、通話終了時に<strong>データを失うことなく</strong>活動統計(ACTIVITY)として自動蓄積される、<strong>正規化されたモデル</strong>を設計しました。"
       }
     ],
     "troubleShooting": [

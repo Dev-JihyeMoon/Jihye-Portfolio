@@ -20,19 +20,14 @@
     ],
     "features": [
       {
-        "title": "Meetup lifecycle management",
-        "summary": "Designed the full CRUD API, from real-time meetup creation to participant limits and permission control",
-        "detail": "Implemented category- and tag-based search filtering and detailed the accept/decline states organizers manage, building a stable participation flow."
-      },
-      {
         "title": "API gateway for unified MSA logging",
-        "summary": "Built a single entry point with Spring Cloud Gateway and consolidated JWT authentication to remove duplication",
-        "detail": "Standardized request/response logs from distributed microservices so they are collected in one place, and centralized the auth filter at the gateway to share authorization logic across services."
+        "summary": "Built <strong>a single entry point</strong> with Spring Cloud Gateway and consolidated JWT authentication to <strong>remove duplication</strong>",
+        "detail": "Standardized request/response logs from distributed microservices so they are <strong>collected in one place</strong>, and centralized the auth filter at the gateway to <strong>share authorization logic across services</strong>."
       },
       {
         "title": "Refactoring the monolith into microservices (MSA)",
-        "summary": "Split into Auth, MAIN and Chat services and set up independent deployment",
-        "detail": "Chose a separate database for each service (MySQL/MongoDB) to improve availability, and built REST-based communication between services to strengthen stability."
+        "summary": "Split into Auth, MAIN and Chat services and set up <strong>independent deployment</strong>",
+        "detail": "Chose a <strong>separate database for each service</strong> (MySQL/MongoDB) to improve availability, and built <strong>REST-based communication</strong> between services to strengthen stability."
       }
     ],
     "troubleShooting": [
@@ -62,19 +57,19 @@
     "planning": [
       {
         "title": "Writing posts",
-        "description": "Write a recruitment post and set the headcount, period and description"
+        "description": "<strong>Write a recruitment post</strong> and set the headcount, period and description"
       },
       {
         "title": "Meetup matching",
-        "description": "Apply to join; the organizer accepts or declines to confirm members"
+        "description": "Apply to join; <strong>the organizer accepts or declines</strong> to confirm members"
       },
       {
         "title": "Chat",
-        "description": "A real-time chat room for confirmed meetup members"
+        "description": "A <strong>real-time chat room</strong> for confirmed meetup members"
       },
       {
         "title": "Categories",
-        "description": "Find meetups by type (projects, study groups) and tags"
+        "description": "Find meetups <strong>by type (projects, study groups) and tags</strong>"
       }
     ],
     "retrospective": [
@@ -114,18 +109,18 @@
     "features": [
       {
         "title": "One-touch help requests by voice recognition",
-        "summary": "STT (Speech-to-Text) integration and FCM push notifications for users who are not logged in",
-        "detail": "Requests are created automatically from microphone input and lets users correct misrecognized text, and notifications are sent and received via FCM tokens with no sign-up to remove barriers."
+        "summary": "<strong>STT (Speech-to-Text) integration</strong> and <strong>FCM push notifications</strong> for users who are not logged in",
+        "detail": "Requests are created automatically from microphone input, users can correct misrecognized text, and notifications are sent and received <strong>via FCM tokens with no sign-up</strong> to remove barriers."
       },
       {
         "title": "Concurrency control and a signaling server",
-        "summary": "Guaranteed first-come matching with conditional DB updates and connected WebRTC P2P calls through a WebSocket relay",
-        "detail": "Ensured that only one volunteer succeeds when many accept at once, and routed WebRTC session information (SDP/ICE) accurately to the matched peer with a WebSocket handler."
+        "summary": "Guaranteed <strong>first-come matching</strong> with conditional DB updates and connected <strong>WebRTC P2P calls</strong> through a WebSocket relay",
+        "detail": "Ensured that <strong>only one volunteer succeeds when many accept at once</strong>, and routed WebRTC session information (SDP/ICE) accurately to the matched peer with a WebSocket handler."
       },
       {
         "title": "DB design for matching standby and history management",
-        "summary": "ERD optimized for filtering waiting states and automatically storing history when a call ends",
-        "detail": "Mapped volunteer availability (available) to preferred-notification tags and designed a normalized model so that data accumulates into activity statistics without loss when a call ends."
+        "summary": "ERD optimized for filtering waiting states and <strong>automatically storing history</strong> when a call ends",
+        "detail": "Mapped volunteer availability (available) to preferred-notification tags and designed <strong>a normalized model</strong> so that data accumulates into activity statistics <strong>without loss</strong> when a call ends."
       }
     ],
     "troubleShooting": [

@@ -20,19 +20,14 @@
     ],
     "features": [
       {
-        "title": "모임 라이프사이클 관리 시스템",
-        "summary": "실시간 모임 생성부터 인원 제한, 권한 제어까지 전체 CRUD API 설계",
-        "detail": "카테고리·태그 기반 검색 필터링을 구현하고 모임장의 수락/거절 상태 관리를 세분화하여 안정적인 참여 흐름을 구축했습니다."
-      },
-      {
         "title": "MSA 통합 로깅을 위한 API 게이트웨이",
-        "summary": "Spring Cloud Gateway 기반 단일 진입점 구축 및 JWT 인증 처리를 통한 중복 제거",
-        "detail": "분산된 마이크로서비스(MSA)의 요청·응답 로그를 규격화하여 한곳에서 수집하고, 인증 필터를 게이트웨이에 집중시켜 각 서비스의 인가 로직을 공통화했습니다."
+        "summary": "Spring Cloud Gateway 기반 <strong>단일 진입점 구축</strong> 및 JWT 인증 처리를 통한 <strong>중복 제거</strong>",
+        "detail": "분산된 마이크로서비스(MSA)의 요청·응답 로그를 규격화하여 <strong>한곳에서 수집</strong>하고, 인증 필터를 게이트웨이에 집중시켜 각 서비스의 <strong>인가 로직을 공통화</strong>했습니다."
       },
       {
         "title": "모놀리스 아키텍처의 MSA 리팩토링",
-        "summary": "Auth, MAIN, Chat 3개 서비스로 구조적 분리 및 독립 배포 환경 구축",
-        "detail": "서비스 특성에 맞게 DB를 분리(MySQL/MongoDB) 적용하여 가용성을 확보했으며, 서비스 간 REST 기반 통신망을 구축하여 시스템 안정성을 강화했습니다."
+        "summary": "Auth, MAIN, Chat 3개 서비스로 구조적 분리 및 <strong>독립 배포 환경 구축</strong>",
+        "detail": "서비스 특성에 맞게 <strong>DB를 분리(MySQL/MongoDB) 적용하여 가용성을 확보</strong>했으며, 서비스 간 <strong>REST 기반 통신망</strong>을 구축하여 시스템 안정성을 강화했습니다."
       }
     ],
     "troubleShooting": [
@@ -62,19 +57,19 @@
     "planning": [
       {
         "title": "글쓰기",
-        "description": "모임 모집글을 작성하고 모집 인원·기간·소개를 설정"
+        "description": "<strong>모임 모집글을 작성</strong>하고 모집 인원·기간·소개를 설정"
       },
       {
         "title": "모임 매칭",
-        "description": "참여 신청 후 모임장이 수락/거절하여 인원을 확정"
+        "description": "참여 신청 후 <strong>모임장이 수락/거절</strong>하여 인원을 확정"
       },
       {
         "title": "채팅",
-        "description": "확정된 모임 멤버끼리 실시간으로 소통하는 채팅방"
+        "description": "확정된 모임 멤버끼리 <strong>실시간으로 소통</strong>하는 채팅방"
       },
       {
         "title": "카테고리",
-        "description": "프로젝트·스터디 등 유형과 태그로 원하는 모임을 검색"
+        "description": "프로젝트·스터디 등 <strong>유형과 태그</strong>로 원하는 모임을 검색"
       }
     ],
     "retrospective": [
@@ -114,18 +109,18 @@
     "features": [
       {
         "title": "음성 인식 기반 원터치 도움 요청",
-        "summary": "STT(Speech-to-Text) 연동 및 비로그인 시니어 대상 FCM 푸시 알림 처리",
-        "detail": "마이크 입력으로 요청을 자동 생성하고 오인식 시 수정을 지원하며, 장벽을 없애기 위해 가입 절차 없이 FCM 토큰 기반으로 알림을 송수신하도록 구현했습니다."
+        "summary": "<strong>STT(Speech-to-Text) 연동</strong> 및 비로그인 시니어 대상 <strong>FCM 푸시 알림</strong> 처리",
+        "detail": "마이크 입력으로 요청을 자동 생성하고 오인식 시 수정을 지원하며, 장벽을 없애기 위해 <strong>가입 절차 없이 FCM 토큰 기반으로 알림을 송수신</strong>하도록 구현했습니다."
       },
       {
         "title": "동시성 제어 및 시그널링 서버 구현",
-        "summary": "DB 조건부 업데이트로 선착순 매칭 보장, WebSocket 중계로 WebRTC P2P 통화 연결",
-        "detail": "다수의 봉사자가 동시에 수락 시 1명만 성공하도록 동시성을 처리하고, WebSocket 핸들러로 WebRTC 세션 정보(SDP/ICE)를 정확하게 매칭 상대에게 라우팅했습니다."
+        "summary": "DB 조건부 업데이트로 <strong>선착순 매칭 보장</strong>, WebSocket 중계로 <strong>WebRTC P2P 통화 연결</strong>",
+        "detail": "다수의 봉사자가 동시에 수락 시 <strong>1명만 성공하도록 동시성을 처리</strong>하고, WebSocket 핸들러로 WebRTC 세션 정보(SDP/ICE)를 정확하게 매칭 상대에게 라우팅했습니다."
       },
       {
         "title": "매칭 대기 및 이력 관리를 위한 DB 구조 설계",
-        "summary": "대기 상태 필터링 및 통화 종료 시 이력 자동 적재를 위한 ERD 최적화",
-        "detail": "봉사자 활성화 상태(available)와 맞춤 알림 태그를 맵핑하고, 통화 종료 시 데이터 유실 없이 자동 통계(ACTIVITY)로 누적되도록 정규화된 모델을 설계했습니다."
+        "summary": "대기 상태 필터링 및 통화 종료 시 <strong>이력 자동 적재</strong>를 위한 <strong>ERD 최적화</strong>",
+        "detail": "봉사자 활성화 상태(available)와 맞춤 알림 태그를 맵핑하고, 통화 종료 시 <strong>데이터 유실 없이</strong> 자동 통계(ACTIVITY)로 누적되도록 <strong>정규화된 모델</strong>을 설계했습니다."
       }
     ],
     "troubleShooting": [

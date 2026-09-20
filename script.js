@@ -21,7 +21,6 @@ const SECTIONS = [
 // ===== SVG ICONS =====
 const icons = {
   calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
-  phone:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>',
   mail:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>',
   github:   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>',
   chevron:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>',
@@ -60,7 +59,7 @@ const I18N = {
     navAria: '섹션 이동', themeAria: '다크 모드 전환', langAria: '언어 설정', photoAlt: '증명사진', close: '닫기', video: '시연 영상',
     kicker: 'Backend Developer', born: '출생', bornVal: y => `${y}년생`, email: '이메일',
     aboutTitle: '본질을 묻고,<br>최적을 찾습니다.', skillsTitle: '기술 스택', projectsTitle: '프로젝트', awardsTitle: '수상 및 자격증', historyTitle: '이력',
-    logos: '직접 제작한 로고', zoom: '클릭하면 확대',
+    zoom: '클릭하면 확대', zoomAria: '이미지 확대',
     project: 'Project', period: '기간', team: '팀', position: '포지션', behind: '비하인드 스토리',
     plan: '기획 · 주요 기능', demo: '시연 화면 / 아키텍처', impl: '구현 내용', ts: 'Trouble Shooting', retro: '회고', stack: '기술 스택',
     cause: '원인', fix: '해결', result: '결과',
@@ -74,7 +73,7 @@ const I18N = {
     navAria: 'Section navigation', themeAria: 'Toggle dark mode', langAria: 'Language', photoAlt: 'ID photo', close: 'Close', video: 'Demo video',
     kicker: 'Backend Developer', born: 'Born', bornVal: y => `${y}`, email: 'Email',
     aboutTitle: 'Ask what matters,<br>find the optimum.', skillsTitle: 'Tech Stack', projectsTitle: 'Projects', awardsTitle: 'Awards & Certifications', historyTitle: 'History',
-    logos: 'Logos I designed', zoom: 'Click to enlarge',
+    zoom: 'Click to enlarge', zoomAria: 'Enlarge image',
     project: 'Project', period: 'Period', team: 'Team', position: 'Role', behind: 'Behind the story',
     plan: 'Planning & Key Features', demo: 'Demo & Architecture', impl: 'Implementation', ts: 'Troubleshooting', retro: 'Retrospective', stack: 'Tech Stack',
     cause: 'Cause', fix: 'Fix', result: 'Result',
@@ -88,7 +87,7 @@ const I18N = {
     navAria: 'セクション移動', themeAria: 'ダークモード切替', langAria: '言語設定', photoAlt: '証明写真', close: '閉じる', video: 'デモ動画',
     kicker: 'Backend Developer', born: '生年', bornVal: y => `${y}年生`, email: 'メール',
     aboutTitle: '本質を問い、<br>最適を探します。', skillsTitle: '技術スタック', projectsTitle: 'プロジェクト', awardsTitle: '受賞・資格', historyTitle: '経歴',
-    logos: '自作のロゴ', zoom: 'クリックで拡大',
+    zoom: 'クリックで拡大', zoomAria: '画像を拡大',
     project: 'Project', period: '期間', team: 'チーム', position: '役割', behind: '開発の裏話',
     plan: '企画・主要機能', demo: 'デモ画面 / アーキテクチャ', impl: '実装内容', ts: 'トラブルシューティング', retro: '振り返り', stack: '技術スタック',
     cause: '原因', fix: '解決', result: '結果',
@@ -286,23 +285,12 @@ function renderAbout(about) {
       <p>${v.description}</p>
     </li>`).join('');
 
-  const logoItems = (about.logos || []).filter(l => l.src).map(l => `
-    <figure class="logo-item">
-      <img src="${l.src}" alt="${l.label}" data-zoom>
-      <figcaption>${l.label}</figcaption>
-    </figure>`).join('');
-
   return `
   <section class="section" id="about">
     <div class="wrap split">
       <div class="rv">${secHead('About', t().aboutTitle)}</div>
       <div class="rv">
         <ol class="values">${values}</ol>
-        ${logoItems ? `
-        <div class="logo-block">
-          <h4 class="blk-t">${t().logos} <span class="hint">${t().zoom}</span></h4>
-          <div class="logo-grid">${logoItems}</div>
-        </div>` : ''}
       </div>
     </div>
   </section>`;
@@ -341,7 +329,7 @@ function renderProjects(projects) {
       <li><h5>${p.title}</h5><p>${p.description}</p></li>`).join('');
 
     const gallery = (proj.images || []).map(img => img.src
-      ? `<figure class="shot"><img src="${img.src}" alt="${img.label}" data-zoom><figcaption>${img.label}</figcaption></figure>`
+      ? `<figure class="shot"><img src="${img.src}" alt="${img.label}" data-zoom tabindex="0" role="button" aria-label="${t().zoomAria}: ${img.label}"><figcaption>${img.label}</figcaption></figure>`
       : `<div class="shot empty"><span>${img.label}</span></div>`).join('');
 
     const features = proj.features.map((f, i) => `
@@ -489,7 +477,6 @@ function renderFooter(footer, profile) {
       </div>
       <ul class="foot-links">
         <li><a href="mailto:${f.email}">${icons.mail}${f.email}</a></li>
-        <li><a href="tel:${f.phone}">${icons.phone}${f.phone}</a></li>
         <li><a href="${f.github}" target="_blank" rel="noopener">${icons.github}GitHub</a></li>
       </ul>
     </div>
@@ -505,27 +492,62 @@ function toggleBehind(id, btn) {
 }
 
 
-// ===== LIGHTBOX (이미지 확대) =====
+// ===== LIGHTBOX (이미지 확대 · 키보드 지원) =====
 function setupLightbox() {
   const box = document.createElement('div');
   box.className = 'lightbox';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-modal', 'true');
   box.innerHTML = '<button class="lightbox-close" type="button">&times;</button><img alt=""><div class="lightbox-caption"></div>';
   document.body.appendChild(box);
+
   const img = box.querySelector('img');
   const cap = box.querySelector('.lightbox-caption');
+  const closeBtn = box.querySelector('.lightbox-close');
+  let opener = null;
 
-  const close = () => box.classList.remove('open');
-  box.addEventListener('click', close);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  const isOpen = () => box.classList.contains('open');
 
-  document.getElementById('mainContent').addEventListener('click', e => {
-    const target = e.target.closest('img[data-zoom]');
-    if (!target) return;
+  const open = target => {
+    opener = target;
     img.src = target.src;
     img.alt = target.alt;
     cap.textContent = target.alt;
-    box.querySelector('.lightbox-close').setAttribute('aria-label', t().close);
+    box.setAttribute('aria-label', target.alt);
+    closeBtn.setAttribute('aria-label', t().close);
     box.classList.add('open');
+    closeBtn.focus();
+  };
+
+  const close = () => {
+    if (!isOpen()) return;
+    box.classList.remove('open');
+    if (opener && document.contains(opener)) opener.focus({ preventScroll: true });
+    opener = null;
+  };
+
+  box.addEventListener('click', close);
+
+  document.addEventListener('keydown', e => {
+    if (!isOpen()) return;
+    if (e.key === 'Escape') close();
+    // 확대 화면에는 포커스 대상이 닫기 버튼 하나뿐이므로 Tab이 바깥으로 나가지 않게 함
+    if (e.key === 'Tab') { e.preventDefault(); closeBtn.focus(); }
+    // 닫기 버튼에서 Enter / Space로 닫기
+    if ((e.key === 'Enter' || e.key === ' ') && e.target === closeBtn) { e.preventDefault(); close(); }
+  });
+
+  const main = document.getElementById('mainContent');
+  main.addEventListener('click', e => {
+    const target = e.target.closest('img[data-zoom]');
+    if (target) open(target);
+  });
+  main.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const target = e.target.closest('img[data-zoom]');
+    if (!target) return;
+    e.preventDefault();
+    open(target);
   });
 }
 
