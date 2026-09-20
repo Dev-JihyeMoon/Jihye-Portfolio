@@ -1,0 +1,49 @@
+{
+  "certifications": [
+    {
+      "name": "OPIc 일본어 AL",
+      "issuer": "ACTFL",
+      "date": "2024"
+    }
+  ],
+  "awards": [
+    {
+      "name": "내일하루, 실시간 모임 매칭 웹 플랫폼 — 우수상",
+      "issuer": "강남대학교 학술제",
+      "date": "2023.05",
+      "description": ""
+    },
+    {
+      "name": "챌린저스, 멋사 대학 동아리 자체 웹 서비스 제작 — 장려상",
+      "issuer": "강남대학교 학술제",
+      "date": "2023.05",
+      "description": ""
+    },
+    {
+      "name": "공공데이터 활용 시설 관리 웹 서비스 — 장려상 / 발전상",
+      "issuer": "강남대학교 학술제 · 서울시 IoT 도시데이터 해커톤",
+      "date": "2022.08 — 2022.12",
+      "description": "학술제 장려상, 해커톤 발전상 동시 수상"
+    },
+    {
+      "name": "라즈베리파이 & OpenCV 졸음 운전 방지 시스템 — 우수상 / 장려상",
+      "issuer": "강남대학교 학술제 · 한이음 IoT 공모전",
+      "date": "2022.12",
+      "description": "학술제 우수상, 한이음 공모전 장려상 동시 수상"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "(주)큐랩스 웹사이트 배너 디자인 외주",
+      "issuer": "(주)큐랩스 · 강남대학교 ICT융합공학부 주관",
+      "date": "2022.11",
+      "description": "회사 웹 사이트 배너 디자인 작업, 반응형 사이즈 규격에 맞추어 진행"
+    },
+    {
+      "name": "Intel AI Global Impact Festival 교육 보조 강사",
+      "issuer": "Intel & 덕영고등학교 주관",
+      "date": "2021.10",
+      "description": "파이썬 기초 문법 강의 및 OpenCV 실습 보조 강사 활동"
+    }
+  ]
+}

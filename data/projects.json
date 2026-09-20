@@ -1,0 +1,93 @@
+[
+  {
+    "id": "project-1",
+    "name": "MOJI (모여라, 지금!)",
+    "subtitle": "소모임 매칭 및 운영 관리 웹 서비스",
+    "intention": "교내 학과·학번 간의 소통 장벽을 허물고, 누구나 공통의 관심사나 목표(프로젝트/스터디)를 기반으로 쉽게 모임을 개설·운영할 수 있도록 돕는 플랫폼입니다.",
+    "behindStory": "동아리 부회장으로 활동하며 타 동아리와의 협업이나 연합 스터디를 추진하려 했으나, 교내에 이를 중개할 소통 창구가 없다는 불편함을 체감했습니다. 파편화된 모임 문화를 통합하고, 학생들의 협업 경험을 확장하기 위해 직접 기획 및 개발을 주도했습니다.",
+    "period": "2023.07 – 2024.02 (7개월)",
+    "team": "5인 팀 프로젝트",
+    "position": "백엔드 리드 개발자",
+    "images": [
+      { "label": "시연 화면", "src": "data/images/project1-demo.png" },
+      { "label": "아키텍처", "src": "data/images/project1-arch.png" }
+    ],
+    "features": [
+      {
+        "title": "모임 라이프사이클 관리 시스템",
+        "summary": "실시간 모임 생성부터 인원 제한, 권한 제어까지 전체 CRUD API 설계",
+        "detail": "카테고리·태그 기반 검색 필터링을 구현하고 모임장의 수락/거절 상태 관리를 세분화하여 안정적인 참여 흐름을 구축했습니다."
+      },
+      {
+        "title": "MSA 통합 로깅을 위한 API 게이트웨이",
+        "summary": "Spring Cloud Gateway 기반 단일 진입점 구축 및 JWT 인증 처리를 통한 중복 제거",
+        "detail": "분산된 마이크로서비스(MSA)의 요청·응답 로그를 규격화하여 한곳에서 수집하고, 인증 필터를 게이트웨이에 집중시켜 각 서비스의 인가 로직을 공통화했습니다."
+      },
+      {
+        "title": "모놀리스 아키텍처의 MSA 리팩토링",
+        "summary": "Auth, MAIN, Chat 3개 서비스로 구조적 분리 및 독립 배포 환경 구축",
+        "detail": "서비스 특성에 맞게 DB를 분리(MySQL/MongoDB) 적용하여 가용성을 확보했으며, 서비스 간 REST 기반 통신망을 구축하여 시스템 안정성을 강화했습니다."
+      }
+    ],
+    "troubleShooting": [
+      {
+        "problem": "채팅 기능 개발 중 서버 부하로 전체 서비스 다운",
+        "cause": "AWS 프리티어 단일 인스턴스에 채팅 서비스까지 병합 운영하며 리소스 한계 초과",
+        "solution": "교내 서버 지원으로 인프라 확장, 채팅 서비스를 완전 분리하여 MSA 구조 도입",
+        "result": "장애 격리로 채팅 장애 시에도 타 기능 정상 작동, 에러 규격화로 실시간 모니터링 편의성 증대"
+      }
+    ],
+    "techStack": ["Java 17", "Spring Boot", "Spring Cloud Gateway", "Spring Security", "JPA", "JWT", "MySQL", "MongoDB", "WebSocket", "Docker", "AWS EC2", "Gradle"],
+    "github": "https://github.com/Dev-JihyeMoon/MOJI.git",
+    "demo": "https://www.youtube.com/"
+  },
+
+  {
+    "id": "project-2",
+    "name": "Beeper (삐삐)",
+    "subtitle": "디지털 취약계층용 실시간 영상통화 봉사 매칭 서비스",
+    "intention": "디지털 취약계층이나 노약자가 키오스크나 온라인 예약 등 일상에서 마주하는 장벽을 '음성' 하나로 해결하고, 실시간 대기 중인 봉사자와 '영상통화'로 매칭해 주는 실시간 도우미 플랫폼입니다.",
+    "behindStory": "시니어 계층에게는 기존 앱의 '회원가입, 글쓰기' 절차 자체가 거대한 장벽이라는 모순에 주목했습니다. 채팅보다 눈으로 보며 말하는 것이 가장 직관적이고 빠르다는 결론을 내렸고, '말하면 요청이 되고, 수락하면 즉시 얼굴을 보며 연결되는' 제로-배리어(Zero-Barrier) 서비스를 기획했습니다.",
+    "period": "2024.08 (1개월)",
+    "team": "4인 팀 프로젝트 (백엔드 2명, 프론트엔드 2명)",
+    "position": "백엔드 개발 리더",
+    "images": [
+      { "label": "시연 화면", "src": "data/images/project2-demo.gif" },
+      { "label": "ERD", "src": "data/images/project2-db.png" }
+    ],
+    "features": [
+      {
+        "title": "음성 인식 기반 원터치 도움 요청",
+        "summary": "STT(Speech-to-Text) 연동 및 비로그인 시니어 대상 FCM 푸시 알림 처리",
+        "detail": "마이크 입력으로 요청을 자동 생성하고 오인식 시 수정을 지원하며, 장벽을 없애기 위해 가입 절차 없이 FCM 토큰 기반으로 알림을 송수신하도록 구현했습니다."
+      },
+      {
+        "title": "동시성 제어 및 시그널링 서버 구현",
+        "summary": "DB 조건부 업데이트로 선착순 매칭 보장, WebSocket 중계로 WebRTC P2P 통화 연결",
+        "detail": "다수의 봉사자가 동시에 수락 시 1명만 성공하도록 동시성을 처리하고, WebSocket 핸들러로 WebRTC 세션 정보(SDP/ICE)를 정확하게 매칭 상대에게 라우팅했습니다."
+      },
+      {
+        "title": "매칭 대기 및 이력 관리를 위한 DB 구조 설계",
+        "summary": "대기 상태 필터링 및 통화 종료 시 이력 자동 적재를 위한 ERD 최적화",
+        "detail": "봉사자 활성화 상태(available)와 맞춤 알림 태그를 맵핑하고, 통화 종료 시 데이터 유실 없이 자동 통계(ACTIVITY)로 누적되도록 정규화된 모델을 설계했습니다."
+      }
+    ],
+    "troubleShooting": [
+      {
+        "problem": "여러 봉사자가 동시에 같은 요청을 수락하여 중복 매칭 발생",
+        "cause": "수락 API 내에서 조회 상태(Select)와 수정(Update) 시점이 분리되어 경쟁 상태 발생",
+        "solution": "WHERE status = 'WAITING' 조건절을 활용한 단일 쿼리 업데이트로 원자적(Atomic) 선착순 처리",
+        "result": "추가적인 분산 락 비용 없이 DB 레벨에서 중복 매칭 이슈를 완전히 해소"
+      },
+      {
+        "problem": "WebRTC 연결 시 offer/answer 교환 타이밍 불일치로 신호 유실",
+        "cause": "시니어와 봉사자의 소켓 방(Room) 입장 시점이 달라 선행 발송된 시그널링 메시지가 유실됨",
+        "solution": "시그널링 서버에서 방 입장 순서 상태 값을 제어하여, 양측 모두 진입 완료가 확인된 시점에 offer를 전송하도록 흐름 변경",
+        "result": "초기 수락 시 영상통화 연결 실패율을 제로에 가깝게 줄이며 통화 안정성 확보"
+      }
+    ],
+    "techStack": ["Java 21", "Spring Boot 3.3", "Spring Security", "JPA", "JWT", "MySQL", "WebRTC", "WebSocket", "Firebase(FCM)", "AWS EC2", "Gradle", "Swagger"],
+    "github": "https://github.com/Dev-JihyeMoon/Beeper",
+    "demo": "https://www.youtube.com/"
+  }
+]

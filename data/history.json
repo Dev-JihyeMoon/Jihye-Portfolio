@@ -1,0 +1,32 @@
+[
+  {
+    "period": "2026.06 - 2026.12",
+    "title": "멋쟁이 사자처럼 | 백엔드 부트캠프 26기 : Java & Spring",
+    "type": "education",
+    "description": "Spring Boot 기반 백엔드 개발과 AWS 인프라 운영 실무 중심 교육 · 진행 중"
+  },
+  {
+    "period": "2020.03 - 2024.08",
+    "title": "강남대학교 소프트웨어응용학부",
+    "type": "education",
+    "description": "주전공 컴퓨터공학과, 부전공 데이터사이언스학과 졸업"
+  },
+  {
+    "period": "2023.03 - 2023.06",
+    "title": "멋쟁이 사자처럼 대학 동아리",
+    "type": "experience",
+    "description": "백엔드 트랙 · 웹 개발 기초부터 팀 프로젝트까지 진행, 학술제 수상"
+  },
+  {
+    "period": "2022.03 - 2022.12",
+    "title": "한이음 ICT 멘토링 프로젝트",
+    "type": "experience",
+    "description": "산학 연계 프로젝트 참여 · 요구사항 분석부터 설계, 구현, 발표까지 전 과정 수행 · 학술제 수상, 공모전 수상"
+  },
+  {
+    "period": "2017.03 - 2020.02",
+    "title": "덕영고등학교 소프트웨어과",
+    "type": "education",
+    "description": "졸업"
+  }
+]

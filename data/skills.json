@@ -1,0 +1,19 @@
+[
+  {
+    "category": "Language",
+    "items": ["JAVA", "Python", "C", "JavaScript"]
+  },
+  {
+    "category": "Backend & DB",
+    "items": ["Spring Boot", "Gradle", "Firebase", "Spring Data JPA", "Spring Security", "MySQL", "MongoDB"]
+  },
+  {
+    "category": "DevOps",
+    "items": ["AWS EC2 / RDS / S3", "Docker", "Jenkins", "Nginx", "Linux"]
+  },
+  {
+    "category": "Tools & Collaboration",
+    "items": ["Git / GitHub", "Git-flow", "Postman", "Swagger", "Notion", "Figma"]
+  }
+
+]
