@@ -79,11 +79,11 @@
       },
       {
         "label": "What I'd improve",
-        "text": "I adopted MSA earlier than the scale of the service warranted, which increased operational complexity. Measuring traffic and bottlenecks before the transition would have made it a better-grounded decision."
+        "text": "I did not keep numerical records of how the project progressed. If I had recorded traffic and bottlenecks as numbers before the transition, it would have been a better-grounded decision."
       },
       {
         "label": "What I learned",
-        "text": "Architecture should start from real failures and requirements, not technical preference — and, as a lead, documenting things so the whole team shares the same understanding."
+        "text": "Sound design matters more than technology itself. I experienced firsthand that, depending on the service architecture, the same service can cut costs significantly and secure availability."
       }
     ]
   },
