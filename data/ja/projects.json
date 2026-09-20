@@ -53,11 +53,11 @@
       "Gradle"
     ],
     "github": "https://github.com/Dev-JihyeMoon/MOJI.git",
-    "demo": "https://www.youtube.com/",
+    "service": "http://moji-jihye.duckdns.org",
     "planning": [
       {
-        "title": "投稿",
-        "description": "<strong>募集投稿を書き</strong>、人数・期間・紹介を設定"
+        "title": "集まりの登録",
+        "description": "<strong>集まりの情報を登録</strong>し、人数・期間・紹介を設定"
       },
       {
         "title": "集まりのマッチング",
@@ -152,7 +152,7 @@
       "Swagger"
     ],
     "github": "https://github.com/Dev-JihyeMoon/Beeper",
-    "demo": "https://www.youtube.com/",
+    "service": "http://beeper-jihye.duckdns.org",
     "planning": [
       {
         "title": "音声でのサポート依頼",

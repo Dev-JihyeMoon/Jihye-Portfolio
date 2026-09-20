@@ -53,11 +53,11 @@
       "Gradle"
     ],
     "github": "https://github.com/Dev-JihyeMoon/MOJI.git",
-    "demo": "https://www.youtube.com/",
+    "service": "http://moji-jihye.duckdns.org",
     "planning": [
       {
-        "title": "Writing posts",
-        "description": "<strong>Write a recruitment post</strong> and set the headcount, period and description"
+        "title": "Meetup registration",
+        "description": "<strong>Register the meetup information</strong> and set the headcount, period and description"
       },
       {
         "title": "Meetup matching",
@@ -152,7 +152,7 @@
       "Swagger"
     ],
     "github": "https://github.com/Dev-JihyeMoon/Beeper",
-    "demo": "https://www.youtube.com/",
+    "service": "http://beeper-jihye.duckdns.org",
     "planning": [
       {
         "title": "Voice help request",

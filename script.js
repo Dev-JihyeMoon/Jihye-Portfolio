@@ -38,6 +38,7 @@ const icons = {
 
 
 Object.assign(icons, {
+  cake: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M5 21v-7a1 1 0 011-1h12a1 1 0 011 1v7"/><path d="M5 17.5c1.5 1 2.5 1 3.5 0s2-1 3.5 0 2.5 1 3.5 0 2-1 3.5 0"/><path d="M12 13V9"/><path d="M12 4c1 1 1 2 0 3-1-1-1-2 0-3z"/></svg>',
   sun:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>',
   moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>',
   up:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>'
@@ -56,8 +57,8 @@ const I18N = {
     docTitle: '문지혜 | 백엔드 개발자 포트폴리오',
     docDesc: '최적을 추구하며 파고드는 백엔드 개발자 문지혜의 포트폴리오입니다.',
     nav: { about: '소개', skills: '기술', projects: '프로젝트', awards: '수상·자격', history: '이력' },
-    navAria: '섹션 이동', themeAria: '다크 모드 전환', langAria: '언어 설정', photoAlt: '증명사진', close: '닫기', video: '시연 영상',
-    kicker: 'Backend Developer', born: '출생', bornVal: y => `${y}년생`, email: '이메일',
+    navAria: '섹션 이동', themeAria: '다크 모드 전환', langAria: '언어 설정', photoAlt: '증명사진', close: '닫기', service: '서비스 URL',
+    kicker: 'Backend Developer', born: '생일', email: '이메일',
     aboutTitle: '본질을 묻고,<br>최적을 찾습니다.', skillsTitle: '기술 스택', projectsTitle: '프로젝트', awardsTitle: '수상 및 자격증', historyTitle: '이력',
     zoom: '클릭하면 확대', zoomAria: '이미지 확대',
     project: 'Project', period: '기간', team: '팀', position: '포지션', behind: '비하인드 스토리',
@@ -70,8 +71,8 @@ const I18N = {
     docTitle: 'Jihye Moon | Backend Developer Portfolio',
     docDesc: 'Portfolio of Jihye Moon, a backend developer who digs deep for the optimal solution.',
     nav: { about: 'About', skills: 'Skills', projects: 'Projects', awards: 'Awards', history: 'History' },
-    navAria: 'Section navigation', themeAria: 'Toggle dark mode', langAria: 'Language', photoAlt: 'ID photo', close: 'Close', video: 'Demo video',
-    kicker: 'Backend Developer', born: 'Born', bornVal: y => `${y}`, email: 'Email',
+    navAria: 'Section navigation', themeAria: 'Toggle dark mode', langAria: 'Language', photoAlt: 'ID photo', close: 'Close', service: 'Service URL',
+    kicker: 'Backend Developer', born: 'Birthday', email: 'Email',
     aboutTitle: 'Ask what matters,<br>find the optimum.', skillsTitle: 'Tech Stack', projectsTitle: 'Projects', awardsTitle: 'Awards & Certifications', historyTitle: 'History',
     zoom: 'Click to enlarge', zoomAria: 'Enlarge image',
     project: 'Project', period: 'Period', team: 'Team', position: 'Role', behind: 'Behind the story',
@@ -84,8 +85,8 @@ const I18N = {
     docTitle: 'Jihye Moon | バックエンド開発者ポートフォリオ',
     docDesc: '最適を追い求めて掘り下げるバックエンド開発者、Jihye Moonのポートフォリオです。',
     nav: { about: '紹介', skills: '技術', projects: 'プロジェクト', awards: '受賞・資格', history: '経歴' },
-    navAria: 'セクション移動', themeAria: 'ダークモード切替', langAria: '言語設定', photoAlt: '証明写真', close: '閉じる', video: 'デモ動画',
-    kicker: 'Backend Developer', born: '生年', bornVal: y => `${y}年生`, email: 'メール',
+    navAria: 'セクション移動', themeAria: 'ダークモード切替', langAria: '言語設定', photoAlt: '証明写真', close: '閉じる', service: 'サービスURL',
+    kicker: 'Backend Developer', born: '誕生日', email: 'メール',
     aboutTitle: '本質を問い、<br>最適を探します。', skillsTitle: '技術スタック', projectsTitle: 'プロジェクト', awardsTitle: '受賞・資格', historyTitle: '経歴',
     zoom: 'クリックで拡大', zoomAria: '画像を拡大',
     project: 'Project', period: '期間', team: 'チーム', position: '役割', behind: '開発の裏話',
@@ -262,9 +263,9 @@ function renderHero(p, about) {
         ${about ? `<p class="hero-p">${about.description}</p>` : ''}
         <div class="lang" role="group" aria-label="${t().langAria}">${langs}</div>
         <dl class="hero-facts">
-          ${p.birthYear ? `<div><dt>${t().born}</dt><dd>${t().bornVal(p.birthYear)}</dd></div>` : ''}
-          <div><dt>${t().email}</dt><dd><a href="mailto:${p.email}">${p.email}</a></dd></div>
-          <div><dt>GitHub</dt><dd><a href="${p.github}" target="_blank" rel="noopener">${p.github.replace(/^https?:\/\//, '')}</a></dd></div>
+          ${p.birthday ? `<div><dt>${icons.cake}${t().born}</dt><dd>${p.birthday}</dd></div>` : ''}
+          <div><dt>${icons.mail}${t().email}</dt><dd><a href="mailto:${p.email}">${p.email}</a></dd></div>
+          <div><dt>${icons.github}GitHub</dt><dd><a href="${p.github}" target="_blank" rel="noopener">${p.github.replace(/^https?:\/\//, '')}</a></dd></div>
         </dl>
       </div>
       <figure class="hero-photo">
@@ -322,7 +323,7 @@ function renderProjects(projects) {
 
   const cards = projects.map((proj, pi) => {
     const links = [];
-    if (proj.demo) links.push(`<a href="${proj.demo}" target="_blank" rel="noopener" class="btn sm"><span>${t().video}</span><b class="arr">${icons.up}</b></a>`);
+    if (proj.service) links.push(`<a href="${proj.service}" target="_blank" rel="noopener" class="btn sm"><span>${t().service}</span><b class="arr">${icons.up}</b></a>`);
     if (proj.github) links.push(`<a href="${proj.github}" target="_blank" rel="noopener" class="btn sm ghost"><span>GitHub</span><b class="arr">${icons.up}</b></a>`);
 
     const plan = (proj.planning || []).map(p => `

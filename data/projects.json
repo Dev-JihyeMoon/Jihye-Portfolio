@@ -53,11 +53,11 @@
       "Gradle"
     ],
     "github": "https://github.com/Dev-JihyeMoon/MOJI.git",
-    "demo": "https://www.youtube.com/",
+    "service": "http://moji-jihye.duckdns.org",
     "planning": [
       {
-        "title": "글쓰기",
-        "description": "<strong>모임 모집글을 작성</strong>하고 모집 인원·기간·소개를 설정"
+        "title": "모임 등록",
+        "description": "<strong>모임 정보를 등록</strong>하고 모집 인원·기간·소개를 설정"
       },
       {
         "title": "모임 매칭",
@@ -152,7 +152,7 @@
       "Swagger"
     ],
     "github": "https://github.com/Dev-JihyeMoon/Beeper",
-    "demo": "https://www.youtube.com/",
+    "service": "http://beeper-jihye.duckdns.org",
     "planning": [
       {
         "title": "음성 도움 요청",
