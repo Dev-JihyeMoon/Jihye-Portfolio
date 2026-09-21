@@ -3,7 +3,7 @@
     "period": "2026.06 - 2026.12",
     "title": "LIKELION | Backend Bootcamp Cohort 26: Java & Spring",
     "type": "education",
-    "description": "Spring Bootによるバックエンド開発とAWSインフラ運用の実務中心の教育",
+    "description": "Spring Bootによるバックエンド開発とAWSインフラ運用を中心とした実践型の教育",
     "current": true
   },
   {
@@ -16,7 +16,7 @@
     "period": "2023.03 - 2023.06",
     "title": "LIKELION 大学サークル",
     "type": "experience",
-    "description": "バックエンドトラック・Web開発の基礎からチームプロジェクトまで実施、学術祭で受賞"
+    "description": "バックエンドトラック・Web開発の基礎からチームプロジェクトまで取り組み、学術祭で受賞"
   },
   {
     "period": "2022.03 - 2022.12",

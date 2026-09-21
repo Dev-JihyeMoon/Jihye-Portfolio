@@ -3,8 +3,8 @@
     "id": "project-1",
     "name": "MOJI (Meet Up, Now!)",
     "subtitle": "A web service for matching and managing small-group meetups",
-    "intention": "A platform that breaks down communication barriers between departments and class years on campus, so anyone can easily <strong>create and run a meetup</strong> around <strong>a shared interest or goal (projects, study groups)</strong>.",
-    "behindStory": "As vice president of a club, I tried to set up collaborations and joint study groups with other clubs, but felt the inconvenience of having no channel on campus to connect us. To unify the fragmented culture of student meetups and broaden students' collaboration experience, I led the planning and development myself.",
+    "intention": "A platform that breaks down communication barriers between departments and cohorts on campus, so anyone can easily <strong>create and run a meetup</strong> around <strong>a shared interest or goal (projects, study groups)</strong>.",
+    "behindStory": "As vice president of a club, I tried to set up collaborations and joint study groups with other clubs, but ran into the problem that there was no channel on campus to connect us. To bring scattered student meetups together and broaden students' collaboration experience, I led the planning and development myself.",
     "period": "Jul 2023 – Feb 2024 (7 months)",
     "team": "Team of 5",
     "position": "Backend Lead Developer",
@@ -75,24 +75,24 @@
     "retrospective": [
       {
         "label": "What went well",
-        "text": "After a single-server outage, I separated the chat service and split the system into Auth, MAIN and Chat, building a failure-isolated, independently deployable structure myself."
+        "text": "After a single-server outage, I separated the chat service and split the system into Auth, MAIN and Chat, building a failure-isolated, independently deployable structure on my own."
       },
       {
         "label": "What I'd improve",
-        "text": "I did not keep numerical records of how the project progressed. If I had recorded traffic and bottlenecks as numbers before the transition, it would have been a better-grounded decision."
+        "text": "I didn't track the project's progress with concrete metrics. If I had recorded traffic and bottlenecks as metrics before the transition, it would have been a better-grounded decision."
       },
       {
         "label": "What I learned",
-        "text": "Sound design matters more than technology itself. I experienced firsthand that, depending on the service architecture, the same service can cut costs significantly and secure availability."
+        "text": "Solid architectural design matters more than technology itself. I experienced firsthand that, depending on the service architecture, the same service can cut costs significantly and secure availability."
       }
     ]
   },
   {
     "id": "project-2",
     "name": "Beeper",
-    "subtitle": "A real-time video-call volunteer matching service for people who struggle with digital technology",
+    "subtitle": "A real-time video-call volunteer matching service for people less comfortable with digital technology",
     "intention": "A real-time assistance platform that removes everyday barriers such as kiosks and online reservations for <strong>older adults and others less comfortable with digital tools</strong> with <strong>just their voice</strong>, and <strong>matches them by video call</strong> with volunteers on standby.",
-    "behindStory": "I noticed a contradiction: for seniors, even the \"sign up and write a post\" steps of existing apps are a huge barrier. I concluded that seeing and speaking is more intuitive and faster than chat, and planned a zero-barrier service: \"speak and it becomes a request; accept it and you are face to face right away.\"",
+    "behindStory": "I noticed a contradiction: for seniors, even the \"sign up and write a post\" steps of existing apps are a huge barrier. I concluded that seeing and speaking are more intuitive and faster than chat, and planned a zero-barrier service: \"speak and it becomes a request; accept it and you are face to face right away.\"",
     "period": "Aug 2024 (1 month)",
     "team": "Team of 4 (2 backend, 2 frontend)",
     "position": "Backend Development Lead",
@@ -119,8 +119,8 @@
       },
       {
         "title": "DB design for matching standby and history management",
-        "summary": "ERD optimized for filtering waiting states and <strong>automatically storing history</strong> when a call ends",
-        "detail": "Mapped volunteer availability (available) to preferred-notification tags and designed <strong>a normalized model</strong> so that data accumulates into activity statistics <strong>without loss</strong> when a call ends."
+        "summary": "ERD optimized for filtering by waiting status and <strong>automatically storing history</strong> when a call ends",
+        "detail": "Mapped volunteer availability status to notification preference tags and designed <strong>a normalized model</strong> so that data accumulates into activity statistics <strong>without loss</strong> when a call ends."
       }
     ],
     "troubleShooting": [
@@ -133,7 +133,7 @@
       {
         "problem": "Signals were lost because the WebRTC offer/answer exchange timing did not line up",
         "cause": "The senior and the volunteer joined the socket room at different times, so early signaling messages were lost",
-        "solution": "Had the signaling server track room-join order and send the offer only after both sides were confirmed to have joined",
+        "solution": "Had the signaling server track room-join order and send the offer only after confirming both sides had joined",
         "result": "Brought the video-call connection failure rate on first accept close to zero and secured call stability"
       }
     ],

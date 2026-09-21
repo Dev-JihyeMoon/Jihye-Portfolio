@@ -73,12 +73,12 @@ const I18N = {
     nav: { about: 'About', skills: 'Skills', projects: 'Projects', awards: 'Awards', history: 'History' },
     navAria: 'Section navigation', themeAria: 'Toggle dark mode', langAria: 'Language', photoAlt: 'ID photo', close: 'Close', service: 'Service URL',
     kicker: 'Backend Developer', born: 'Birthday', email: 'Email',
-    aboutTitle: 'Ask what matters,<br>find the optimum.', skillsTitle: 'Tech Stack', projectsTitle: 'Projects', awardsTitle: 'Awards & Certifications', historyTitle: 'History',
+    aboutTitle: 'Ask what matters,<br>find the optimal answer.', skillsTitle: 'Tech Stack', projectsTitle: 'Projects', awardsTitle: 'Awards & Certifications', historyTitle: 'History',
     zoom: 'Click to enlarge', zoomAria: 'Enlarge image',
-    project: 'Project', period: 'Period', team: 'Team', position: 'Role', behind: 'Behind the story',
+    project: 'Project', period: 'Period', team: 'Team', position: 'Role', behind: 'The story behind it',
     plan: 'Planning & Key Features', demo: 'Demo & Architecture', impl: 'Implementation', ts: 'Troubleshooting', retro: 'Retrospective', stack: 'Tech Stack',
     cause: 'Cause', fix: 'Fix', result: 'Result',
-    gAwards: 'Awards', gCerts: 'Certifications · Language', gExp: 'Experience',
+    gAwards: 'Awards', gCerts: 'Certifications · Language Proficiency', gExp: 'Experience',
     edu: 'Education', exp: 'Experience', now: 'In progress'
   },
   ja: {
@@ -93,7 +93,7 @@ const I18N = {
     plan: '企画・主要機能', demo: 'デモ画面 / アーキテクチャ', impl: '実装内容', ts: 'トラブルシューティング', retro: '振り返り', stack: '技術スタック',
     cause: '原因', fix: '解決', result: '結果',
     gAwards: '受賞', gCerts: '資格・語学', gExp: '経験',
-    edu: '教育', exp: '経験', now: '進行中'
+    edu: '教育', exp: '活動', now: '進行中'
   }
 };
 
