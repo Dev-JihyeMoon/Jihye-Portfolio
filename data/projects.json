@@ -16,6 +16,10 @@
       {
         "label": "아키텍처",
         "src": "data/images/project1-arch.png"
+      },
+      {
+        "label": "ERD",
+        "src": "data/images/project1-db.png"
       }
     ],
     "features": [
@@ -98,8 +102,12 @@
     "position": "백엔드 개발 리더",
     "images": [
       {
-        "label": "시연 화면",
+        "label": "영상 통화 도움 화면",
         "src": "data/images/project2-demo.gif"
+      },
+      {
+        "label": "봉사 기록 대시보드",
+        "src": "data/images/project2-demo2.gif"
       },
       {
         "label": "ERD",

@@ -329,9 +329,16 @@ function renderProjects(projects) {
     const plan = (proj.planning || []).map(p => `
       <li><h5>${p.title}</h5><p>${p.description}</p></li>`).join('');
 
-    const gallery = (proj.images || []).map(img => img.src
-      ? `<figure class="shot"><img src="${img.src}" alt="${img.label}" data-zoom tabindex="0" role="button" aria-label="${t().zoomAria}: ${img.label}"><figcaption>${img.label}</figcaption></figure>`
-      : `<div class="shot empty"><span>${img.label}</span></div>`).join('');
+    const zoomImg = (src, label) => `<img src="${src}" alt="${label}" data-zoom tabindex="0" role="button" aria-label="${t().zoomAria}: ${label}">`;
+    const gallery = (proj.images || []).map(img => {
+      if (img.items) {
+        const inner = img.items.map(it => it.src ? zoomImg(it.src, it.label) : `<div class="shot empty"><span>${it.label}</span></div>`).join('');
+        return `<figure class="shot shot-group"><div class="shot-group-imgs">${inner}</div><figcaption>${img.label}</figcaption></figure>`;
+      }
+      return img.src
+        ? `<figure class="shot">${zoomImg(img.src, img.label)}<figcaption>${img.label}</figcaption></figure>`
+        : `<div class="shot empty"><span>${img.label}</span></div>`;
+    }).join('');
 
     const features = proj.features.map((f, i) => `
       <li>
@@ -357,7 +364,7 @@ function renderProjects(projects) {
     const tech = (proj.techStack || []).map(x => `<li>${x}</li>`).join('');
 
     return `
-    <article class="project rv">
+    <article class="project rv" data-project="${proj.id}">
       <header class="p-head">
         <div class="p-top">
           <span class="p-idx">${t().project} ${String(pi + 1).padStart(2, '0')}</span>

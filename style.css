@@ -283,6 +283,35 @@ strong {
 .shot figcaption { padding: 8px 14px; font-size: 13px; font-weight: 500; text-align: center; color: var(--ink-3); border-top: 1px solid var(--line); background: var(--card); }
 .shot.empty { aspect-ratio: 16 / 10; display: grid; place-items: center; text-align: center; font-size: 14px; color: var(--ink-3); background: var(--card); }
 
+/* 한 상자 안에 이미지 여러 장을 나란히 담는 경우 (예: 시연 화면 1·2) */
+.shot-group-imgs { display: flex; gap: 10px; padding: 10px; }
+.shot-group-imgs img { flex: 1 1 0; min-width: 0; width: 100%; max-height: 360px; object-fit: contain; cursor: zoom-in; transition: transform 0.5s var(--ease); }
+.shot-group-imgs img:hover { transform: scale(1.02); }
+
+/* 이미지가 3장인 갤러리: 1번째는 왼쪽 열에서 2개 행 전체, 2·3번째는 오른쪽 열에서 위아래로 쌓임 */
+.gallery:has(> :nth-child(3)) {
+  display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; align-items: start;
+}
+.gallery:has(> :nth-child(3)) > :first-child {
+  grid-row: 1 / span 2; display: flex; flex-direction: column; height: 100%;
+}
+.gallery:has(> :nth-child(3)) > :first-child img {
+  flex: 1; min-height: 0; max-height: none; height: 100%;
+}
+
+/* Beeper: 3장을 동일한 3분할(가로 나열)로 배치 — 위 MOJI용 그리드 배치를 데스크톱에서만 되돌림 */
+@media (min-width: 721px) {
+  [data-project="project-2"] .gallery:has(> :nth-child(3)) {
+    display: flex; align-items: flex-start;
+  }
+  [data-project="project-2"] .gallery:has(> :nth-child(3)) > :first-child {
+    grid-row: auto; display: block; height: auto;
+  }
+  [data-project="project-2"] .gallery:has(> :nth-child(3)) > :first-child img {
+    flex: none; height: auto; max-height: 360px; min-height: auto;
+  }
+}
+
 /* implementation */
 .feats { display: grid; grid-template-columns: 1fr; gap: 14px; }
 .feats li { display: grid; grid-template-columns: 34px 1fr; column-gap: 16px; padding: 20px 24px; border: 1px solid var(--line); border-radius: var(--r-sm); }
@@ -410,6 +439,9 @@ strong {
   .skill-row { gap: 12px; }
   .gallery { flex-direction: column; align-items: stretch; }
   .shot { flex: none; }
+  .gallery:has(> :nth-child(3)) { grid-template-columns: 1fr; grid-auto-rows: auto; align-items: start; }
+  .gallery:has(> :nth-child(3)) > :first-child { grid-row: auto; height: auto; }
+  .gallery:has(> :nth-child(3)) > :first-child img { flex: none; height: auto; max-height: 360px; }
   .hint { display: none; }
   .foot { align-items: flex-start; }
 }

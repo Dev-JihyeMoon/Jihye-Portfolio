@@ -16,6 +16,10 @@
       {
         "label": "アーキテクチャ",
         "src": "data/images/project1-arch.png"
+      },
+      {
+        "label": "ERD",
+        "src": "data/images/project1-db.png"
       }
     ],
     "features": [
@@ -98,8 +102,12 @@
     "position": "バックエンド開発リーダー",
     "images": [
       {
-        "label": "デモ画面",
+        "label": "ビデオ通話サポート画面",
         "src": "data/images/project2-demo.gif"
+      },
+      {
+        "label": "ボランティア活動ダッシュボード",
+        "src": "data/images/project2-demo2.gif"
       },
       {
         "label": "ERD",

@@ -16,6 +16,10 @@
       {
         "label": "Architecture",
         "src": "data/images/project1-arch.png"
+      },
+      {
+        "label": "ERD",
+        "src": "data/images/project1-db.png"
       }
     ],
     "features": [
@@ -98,8 +102,12 @@
     "position": "Backend Development Lead",
     "images": [
       {
-        "label": "Demo screens",
+        "label": "Video call help screen",
         "src": "data/images/project2-demo.gif"
+      },
+      {
+        "label": "Volunteer activity dashboard",
+        "src": "data/images/project2-demo2.gif"
       },
       {
         "label": "ERD",
