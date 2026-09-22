@@ -323,6 +323,9 @@ function renderProjects(projects) {
 
   const cards = projects.map((proj, pi) => {
     const links = [];
+    // MOJI(project-1)는 서비스 URL·GitHub를 임시로 내렸음: data/projects.json에서
+    // "service"/"github" 키를 "_service_disabled"/"_github_disabled"로 바꿔 두었음.
+    // 되돌리려면 각 언어 파일에서 접두사만 제거하면 됨.
     if (proj.service) links.push(`<a href="${proj.service}" target="_blank" rel="noopener" class="btn sm"><span>${t().service}</span><b class="arr">${icons.up}</b></a>`);
     if (proj.github) links.push(`<a href="${proj.github}" target="_blank" rel="noopener" class="btn sm ghost"><span>GitHub</span><b class="arr">${icons.up}</b></a>`);
 

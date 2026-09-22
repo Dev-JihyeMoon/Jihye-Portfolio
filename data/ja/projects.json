@@ -56,8 +56,8 @@
       "AWS EC2",
       "Gradle"
     ],
-    "github": "https://github.com/Dev-JihyeMoon/MOJI.git",
-    "service": "http://moji-jihye.duckdns.org",
+    "_github_disabled": "https://github.com/Dev-JihyeMoon/MOJI.git",
+    "_service_disabled": "http://moji-jihye.duckdns.org",
     "planning": [
       {
         "title": "集まりの登録",
